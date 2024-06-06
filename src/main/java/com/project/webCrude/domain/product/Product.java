@@ -13,17 +13,19 @@ import lombok.*; // a notação dessa biblioteca fará a geração dops getter e
 
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String name;
 
-    private int price_in_cents;
+    private Integer price_in_cents;
+
+    private Boolean active = true;
 
     public Product(RequestProduct requestProduct){
         this.name = requestProduct.name();
         this.price_in_cents = requestProduct.price_in_cents();
+        this.active = true;
     }
 
 

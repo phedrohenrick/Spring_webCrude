@@ -9,7 +9,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
 @RestController
@@ -25,7 +24,7 @@ public class ProductController {
     @GetMapping
     public ResponseEntity getAllProducts(){
 
-        var allProducts = repository.findAll();
+        var allProducts = repository.findAllByActiveTrue();
         return ResponseEntity.ok(allProducts);
     }
 
@@ -50,11 +49,24 @@ public class ProductController {
             return ResponseEntity.ok(product);
 
         }else {
-
             return ResponseEntity.notFound().build();
         }
     }
 
+    @DeleteMapping("/{id}")
+    @Transactional // faz a tranzação de delete e concretiza no BD
+    public ResponseEntity deleteProduct(@PathVariable String id){
 
+        Optional<Product> OptionalProduct = repository.findById(id);
+
+        if(OptionalProduct.isPresent()){ // dessa forma não deletaremos o dado da tabela mas sim desativá-lo
+            Product product = OptionalProduct.get();
+            product.setActive(false);
+            return ResponseEntity.ok(product);
+        }else {
+                return ResponseEntity.notFound().build();
+
+        }
+    }
 
 }
