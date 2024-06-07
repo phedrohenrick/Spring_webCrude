@@ -4,6 +4,7 @@ package com.project.webCrude.Controllers;
 import com.project.webCrude.domain.product.Product;
 import com.project.webCrude.domain.product.ProductRepository;
 import com.project.webCrude.domain.product.RequestProduct;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,7 @@ public class ProductController {
             return ResponseEntity.ok(product);
 
         }else {
-            return ResponseEntity.notFound().build();
+            throw new EntityNotFoundException();
         }
     }
 
@@ -64,8 +65,7 @@ public class ProductController {
             product.setActive(false);
             return ResponseEntity.ok(product);
         }else {
-                return ResponseEntity.notFound().build();
-
+                throw new EntityNotFoundException();
         }
     }
 
