@@ -76,7 +76,7 @@ docker-compose up -d
 ```
 
 ## Contato  
- Email: seu.email@example.com  
+ Email: pherohenrickdasilva@gmail.com
  GitHub: [phedrohenrick](https://github.com/phedrohenrick)  
  LinkedIn: [Seu Perfil](https://linkedin.com/in/phedrohenrick)  
 
