@@ -78,7 +78,7 @@ docker-compose up -d
 ## Contato  
  Email: pherohenrickdasilva@gmail.com
  GitHub: [phedrohenrick](https://github.com/phedrohenrick)  
- LinkedIn: [Seu Perfil]([https://linkedin.com/in/phedrohenrick](https://www.linkedin.com/in/phedro-henrick-da-silva-le%C3%A3o-b13b96234/]) 
+ LinkedIn: [Venha visitar!](https://www.linkedin.com/in/phedro-henrick-da-silva-le%C3%A3o-b13b96234/]) 
 
 ---
 
