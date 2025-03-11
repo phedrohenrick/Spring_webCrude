@@ -1,6 +1,3 @@
-Aqui está um README estruturado e profissional para sua API Spring CRUD de armazenamento de produtos:  
-
----
 
 # API de Armazenamento de Produtos – Spring Boot  
 
@@ -11,7 +8,6 @@ Esta API foi desenvolvida com **Spring Boot** para gerenciar um CRUD de produtos
 - **Spring Boot** – Framework para desenvolvimento da API  
 - **Spring Data JPA** – Gerenciamento de persistência  
 - **PostgreSQL** – Banco de dados relacional  
-- **Spring Security (Opcional)** – Autenticação e autorização  
 - **Swagger/OpenAPI** – Documentação da API  
 - **Docker** – Containerização da aplicação  
 
